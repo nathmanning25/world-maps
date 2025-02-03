@@ -3,20 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --background: #fafafa;
-  --foreground: #171717;
+  --dark-blue: #2a3b47; /* Dark Blue (Dark Mode Elements) */
+  --very-dark-blue-bg: #223743; /* Very Dark Blue (Dark Mode Background) */
+  --very-dark-blue-text: #14181a; /* Very Dark Blue (Light Mode Text) */
+  --dark-gray: #858585; /* Dark Gray (Light Mode Input) */
+  --very-light-gray: #fafafa; /* Very Light Gray (Light Mode Background) */
+  --white: #ffffff; /* White (Dark Mode Text & Light Mode Elements) */
+
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-   --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 body {
-  /* color: var(--foreground); */
-  background: var(--background);
+  color: var(--very-dark-blue-text);
+  background: var(--very-light-gray);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -25,4 +23,18 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem;
+}
+
+body.dark nav {
+  background-color: var(--dark-blue);
+}
+
+body.dark{
+  color: var(--white);
+  background-color: var(--dark-blue)
+}
+
+body.dark .card-body {
+  background-color: var(--very-dark-blue-bg);
+  border: 0;
 }

@@ -39,7 +39,7 @@ export default async function CountriesGrid({
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 row-span-10">
         {data.map((country) => (
-          <div key={country.cca3}>
+          <div key={country.cca3} className="card">
             <Card
               country={country.name.common}
               flags={country.flags.png}

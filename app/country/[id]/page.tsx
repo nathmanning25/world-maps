@@ -5,9 +5,9 @@ export default async function Page({ params }: { params: { id: string } }) {
   const data = await fetchCountriesByName(params.id);
 
   return (
-    <div className="container flex flex-col">
+    <div className="flex flex-col">
       {data.map((country) => (
-        <div key={country.cca3} className="flex flex-row gap-12">
+        <div key={country.cca3} className="flex flex-row gap-12 mt-8">
           <div className="w-2/5">
             <Image
               src={country.flags.png}
@@ -17,11 +17,19 @@ export default async function Page({ params }: { params: { id: string } }) {
               className="w-full h-[350px] object-fill"
             />
           </div>
-          <div className="w-3/5 pl-4">
-            <h1>{country.name.common}</h1>
-            <p>Region: {country.region}</p>
-            <p>Capital: {country.capital}</p>
-            <p>Population: {Number(country.population)}</p>
+          <div className="w-3/5 p-10">
+            <h1 className="font-bold text-3xl mb-6">{country.name.common}</h1>
+            <div className="column">
+              <p>
+                <b>Region:</b> {country.region}
+              </p>
+              <p>
+                <b>Capital:</b> {country.capital}
+              </p>
+              <p>
+                <b>Population:</b> {Number(country.population)}
+              </p>
+            </div>
           </div>
         </div>
       ))}
