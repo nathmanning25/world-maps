@@ -21,6 +21,12 @@ export interface Country {
     borders: string[];
     area: number;
     population: number;
+    currencies: {
+        [key: string]: {
+            name: string;
+            symbol: string;
+        };
+    };
     continents: string[];
     flags: {
         png: string;
