@@ -1,8 +1,8 @@
-import { fetchCountries } from "../services/api";
-import { fetchCountriesByName } from "../services/api";
-import { fetchCountriesByRegion } from "../services/api";
-import Search from "./Filters/Search";
-import Dropdown from "./Filters/Dropdown";
+import { fetchCountries } from "../../services/api";
+import { fetchCountriesByName } from "../../services/api";
+import { fetchCountriesByRegion } from "../../services/api";
+import Search from "../Filters/Search";
+import Dropdown from "../Filters/Dropdown";
 import Card from "./Card";
 
 interface CountriesGridProps {
