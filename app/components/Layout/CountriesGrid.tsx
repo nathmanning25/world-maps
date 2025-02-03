@@ -12,8 +12,8 @@ interface CountriesGridProps {
 export default async function CountriesGrid({
   searchParams,
 }: CountriesGridProps) {
-  const region = searchParams.region;
-  const country = searchParams.country;
+  const region = searchParams?.region;
+  const country = searchParams?.country;
   let data;
 
   try {
@@ -33,7 +33,7 @@ export default async function CountriesGrid({
 
   return (
     <>
-      <div className="flex justify-between my-9">
+      <div className="flex justify-between my-9 items-center">
         <Search />
         <Dropdown />
       </div>

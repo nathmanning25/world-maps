@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { fetchCountriesByName } from "@/app/services/api";
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const data = await fetchCountriesByName(params.id);
+type Params = Promise<{ id: string }>;
+
+export default async function Page(props: { params: Params }) {
+  const { id } = await props.params;
+  const data = await fetchCountriesByName(id);
 
   return (
     <div className="flex flex-col">
