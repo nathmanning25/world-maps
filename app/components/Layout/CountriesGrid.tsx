@@ -33,7 +33,7 @@ export default async function CountriesGrid({
 
   return (
     <>
-      <div className="flex justify-between my-9 items-center">
+      <div className="flex flex-col md:flex-row justify-between my-9 md:items-center gap-4">
         <Search />
         <Dropdown />
       </div>

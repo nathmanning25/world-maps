@@ -25,7 +25,7 @@ export default function Dropdown() {
       <select
         name="Regions"
         id="regions"
-        className="w-48 p-4 border border-gray-300 rounded-md appearance-none"
+        className="w-full md:w-48 p-4 border border-gray-300 rounded-md appearance-none"
         onChange={(event) => handleRegionChange(event.target.value)}
       >
         <option value="default">Select a region</option>

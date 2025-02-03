@@ -42,6 +42,12 @@ body.dark .card-body {
   border: 0;
 }
 
+body.dark input,
+body.dark select {
+  background-color: var(--very-dark-blue-bg);
+  border: 0;
+}
+
 div:focus,
 a:focus,
 button:focus,

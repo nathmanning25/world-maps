@@ -22,7 +22,7 @@ export default function Search() {
   return (
     <>
       <label className="sr-only">Search country</label>
-      <div className="relative w-1/2">
+      <div className="relative md:w-1/2">
         <input
           type="text"
           value={searchQuery}
