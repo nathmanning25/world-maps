@@ -43,14 +43,14 @@ export default async function Page(props: { params: Params }) {
               <b>Capital:</b> {country.capital}
             </p>
             <p>
-              <b>Population:</b> {Number(country.population)}
+              <b>Population:</b> {Number(country.population).toLocaleString()}
             </p>
             <p>
-              <b>Currency:</b>{" "}
+              <b>Currency:</b>
               {Object.values(country.currencies)[0]?.name || "N/A"}
             </p>
             <p>
-              <b>Currency Symbol:</b>{" "}
+              <b>Currency Symbol:</b>
               {Object.values(country.currencies)[0]?.symbol || "N/A"}
             </p>
             <p>
@@ -59,19 +59,40 @@ export default async function Page(props: { params: Params }) {
           </div>
         </div>
       </div>
-      <div className="block mt-8">
-        <h2 className="font-bold text-xl mb-4">
+      <div className="block mt-16">
+        <h2 className="font-bold text-xl mb-12">
           Search other countries in {country.region}:
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {regionData.map((regionalCountry) => (
-            <div key={regionalCountry.cca3} className="p-2 bg-gray-100 rounded">
-              <Link href={`/country/${regionalCountry.name.common}`}>
-                {regionalCountry.name.common}
-              </Link>
-            </div>
-          ))}
-        </div>
+
+        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 gap-x-6">
+          {[...regionData]
+            .sort(() => Math.random() - 0.5)
+            .map((regionalCountry) => (
+              <li
+                key={regionalCountry.cca3}
+                className="p-2 rounded flex flex-row"
+              >
+                <Link
+                  href={`/country/${regionalCountry.name.common}`}
+                  className="flex items-center"
+                >
+                  <Image
+                    src={regionalCountry.flags.png}
+                    alt={
+                      regionalCountry.flags.alt ||
+                      `Flag of ${regionalCountry.name.common}`
+                    }
+                    width={160}
+                    height={80}
+                    className="w-[50px] h-[30px] object-fill"
+                  />
+                  <span className="font-bold hover:text-blue-700 pl-3">
+                    {regionalCountry.name.common}
+                  </span>
+                </Link>
+              </li>
+            ))}
+        </ul>
       </div>
     </div>
   );
