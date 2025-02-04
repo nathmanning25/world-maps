@@ -49,28 +49,6 @@ npm run dev
 
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 📁 Project Structure
-
-```
-rest-countries-api/
-├── app/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── [country]/
-│       └── page.tsx
-├── components/
-│   ├── CountryCard.tsx
-│   ├── SearchBar.tsx
-│   ├── RegionFilter.tsx
-│   ├── ThemeToggle.tsx
-│   └── Header.tsx
-├── lib/
-│   └── api.ts
-├── types/
-│   └── index.ts
-└── tailwind.config.ts
-```
-
 ## 🎯 User Stories
 
 Users should be able to:
