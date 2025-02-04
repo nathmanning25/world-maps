@@ -54,12 +54,11 @@ button:focus,
 input:focus,
 select:focus,
 textarea:focus {
-  color: var(--focus-light);
+  color: var(--focus-light); 
   outline: var(--focus-ring-width) solid var(--focus-light);
   outline-offset: 2px;
 }
 
-/* Active states */
 a:active,
 button:active {
   transform: scale(0.98);
