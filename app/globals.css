@@ -28,6 +28,10 @@ body {
   padding: 1rem;
 }
 
+.custom-shadow {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 5px
+}
+
 body.dark nav {
   background-color: var(--dark-blue);
 }

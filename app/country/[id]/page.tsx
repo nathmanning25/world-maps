@@ -31,30 +31,30 @@ export default async function Page(props: { params: Params }) {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-2 md:gap-x-8">
             <p>
-              <b>Region:</b> {country.region}
+              <b>Region: </b> {country.region}
             </p>
             <p>
-              <b>Sub Region:</b> {country.subregion}
+              <b>Sub Region: </b> {country.subregion}
             </p>
             <p>
               <b>Continent:</b> {country.continents}
             </p>
             <p>
-              <b>Capital:</b> {country.capital}
+              <b>Capital: </b> {country.capital}
             </p>
             <p>
-              <b>Population:</b> {Number(country.population).toLocaleString()}
+              <b>Population: </b> {Number(country.population).toLocaleString()}
             </p>
             <p>
-              <b>Currency:</b>
+              <b>Currency: </b>
               {Object.values(country.currencies)[0]?.name || "N/A"}
             </p>
             <p>
-              <b>Currency Symbol:</b>
+              <b>Currency Symbol: </b>
               {Object.values(country.currencies)[0]?.symbol || "N/A"}
             </p>
             <p>
-              <b>Languages:</b> {Object.values(country.languages).join(", ")}
+              <b>Languages: </b> {Object.values(country.languages).join(", ")}
             </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default async function Page(props: { params: Params }) {
           Search other countries in {country.region}:
         </h2>
 
-        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 gap-x-6">
+        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 gap-x-6 mb-14">
           {[...regionData]
             .sort(() => Math.random() - 0.5)
             .map((regionalCountry) => (

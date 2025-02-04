@@ -26,7 +26,12 @@ export default async function CountriesGrid({
   } catch (error) {
     return (
       <>
-        <h1 className="text-2xl mt-10">No results found for {country}</h1>
+        <div className="flex flex-col md:flex-row justify-between my-9 md:items-center gap-4">
+          <Search />
+        </div>
+        <h1 className="text-2xl mt-10">
+          No results found for {country || "your search"}
+        </h1>
       </>
     );
   }
