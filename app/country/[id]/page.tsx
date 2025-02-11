@@ -22,7 +22,7 @@ export default async function Page(props: { params: Params }) {
             alt={country.flags.alt || `Flag of ${country.name.common}`}
             width={320}
             height={160}
-            className="w-full h-[200px] md:h-[250px] object-fill"
+            className="w-1/2 h-[200px] lg:h-[250px] md:w-full object-fill"
           />
         </div>
         <div className="w-full md:w-3/5 p-4 md:p-10">
@@ -64,7 +64,7 @@ export default async function Page(props: { params: Params }) {
           Search other countries in {country.region}:
         </h2>
 
-        <ul className="grid grid-cols-2 md:grid-cols-4 gap-4 gap-x-6 mb-14">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 gap-x-6 mb-14">
           {[...regionData]
             .sort(() => Math.random() - 0.5)
             .map((regionalCountry) => (

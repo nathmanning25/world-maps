@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --dark-blue: #2a3b47; /* Dark Blue (Dark Mode Elements) */
-  --very-dark-blue-bg: #223743; /* Very Dark Blue (Dark Mode Background) */
-  --very-dark-blue-text: #14181a; /* Very Dark Blue (Light Mode Text) */
-  --dark-gray: #858585; /* Dark Gray (Light Mode Input) */
-  --very-light-gray: #fafafa; /* Very Light Gray (Light Mode Background) */
-  --white: #ffffff; /* White (Dark Mode Text & Light Mode Elements) */
 
+:root {
+  --dark-blue: #2b3945;
+  --very-dark-blue-bg: #202c37;
+  --very-dark-blue-text: #111517;
+  --dark-gray: #858585;
+  --very-light-gray: #fafafa;
+  --white: #ffffff;
+  --shadow: 0 0.125rem 1rem #00000010;
   --focus-light: #4a90e2;
   --focus-dark: #68b5fb;
   --focus-ring-width: 3px;
